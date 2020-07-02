@@ -16,7 +16,7 @@ namespace FactoryDesignPattern
             _factories = new Dictionary<Actions, ThemostatFactory>();
             foreach (Actions action in Enum.GetValues(typeof(Actions)))
             {
-                var factory = (ThemostatFactory)Activator.CreateInstance(Type.GetType("DesignPatterns." + Enum.GetName(typeof(Actions), action) + "ThermostatFactory"));
+                var factory = (ThemostatFactory)Activator.CreateInstance(Type.GetType("DesignPatterns.Factory." + Enum.GetName(typeof(Actions), action) + "ThermoStatFactory"));
                 _factories.Add(action, factory);
             }
 
