@@ -21,7 +21,6 @@ namespace FactoryDesignPattern
             }
 
         }
-
         public IThermostat ExecuteCreate(Actions action, double temp) => _factories[action].Create(temp);
     }
 }

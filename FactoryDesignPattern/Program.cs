@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FactoryDesignPattern.Enums;
+using System;
 
 namespace FactoryDesignPattern
 {
@@ -8,9 +9,9 @@ namespace FactoryDesignPattern
         {
             //Console.WriteLine("Hello World!");
 
-            var factory = new Thermostat().ExecuteCreate(Enums.Actions.Cooling, 17.5);
+            var factory = new Thermostat().ExecuteCreate(Actions.Cooling, 17.5);
             factory.Control();
-            factory = new Thermostat().ExecuteCreate(Enums.Actions.Warming, 21.5);
+            factory = new Thermostat().ExecuteCreate(Actions.Warming, 21.5);
             factory.Control();
             Console.ReadKey();
         }
